@@ -1,21 +1,63 @@
-
 version: 2
 
 models:
-  - name: my_first_dbt_model
-    description: "A starter dbt model"
+  - name: box_transform
     columns:
-      - name: id
-        description: "The primary key for this table"
+      - name: box_id
+        description: The ID column
         tests:
-          - unique
           - not_null
-
-  - name: my_second_dbt_model
-    description: "A starter dbt model"
-    columns:
-      - name: id
-        description: "The primary key for this table"
+      - name: box_name
+        description: The name column
         tests:
-          - unique
           - not_null
+      - name: web_url
+        description: The web URL column
+        tests:
+          - not_null
+      - name: barcode
+        description: The barcode column
+        tests:
+          - not_null
+      - name: creator_name
+        description: The creator name column
+        tests:
+          - not_null
+      - name: creator_handle
+        description: The creator handle column
+        tests:
+          - not_null
+      - name: box_schema_name
+        description: The schema name column
+        tests:
+          - not_null
+      - name: empty_positions
+        description: The empty positions column
+        tests:
+          - not_null
+      - name: filled_positions
+        description: The filled positions column
+        tests:
+          - not_null
+      - name: size
+        description: The size column
+        tests:
+          - not_null
+      - name: empty_containers
+        description: The empty containers column
+        tests:
+          - not_null
+      - name: parent_storage_id
+        description: The parent storage ID column
+        tests:
+          - not_null
+      - name: created_at
+        description: The created at column
+        tests:
+          - not_null
+          - is_timestamp
+      - name: modified_at
+        description: The modified at column
+        tests:
+          - not_null
+          - is_timestamp
